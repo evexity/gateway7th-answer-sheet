@@ -1,0 +1,164 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  background-size: cover;
+  background-image: linear-gradient(rgb(255, 0, 204), rgb(38, 0, 255));
+}
+
+
+.cardBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.flex-container {
+  width: 600px;
+  height: 600px;
+  display: flex;
+  flex-flow: wrap row;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 180px;
+  height: 180px;
+  margin: 5px;
+  border-color: #3a3a3a;
+  font-family: "Ropa Sans";
+  font-size: 21px;
+  position: relative;
+  transition: all 1s linear;
+  transform-style: preserve-3d;
+  display: grid;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.1);
+}
+.card-container:hover {
+  transform: scale(1.15);
+  transition: all 1s linear;
+}
+.card-container {
+  perspective: 800px;
+}
+
+.front,
+.back {
+  height: 100%;
+  width: 100%;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+
+}
+
+.front {
+  color: #ffffff;
+  background: #000000;
+  backface-visibility: hidden;
+  z-index: 2;
+}
+
+.back {
+  color: #ffffff;
+  background: #000000;
+  z-index: 1;
+  transform: rotateY(180deg) rotateZ(90deg);
+}
+.card-container:hover .card {
+  cursor: pointer;
+  transform: rotateY(180deg) rotateZ(90deg);
+  transition-duration: 1s;
+}
+
+h1 {
+  text-align: center;
+  font-size: 42px;
+  font-family: 'Ropa Sans', sans-serif;
+  color: #000000;
+}
+h2 {
+  text-align: center;
+  font-size: 32px;
+  font-family: 'Ropa Sans', sans-serif;
+  color: #000000;
+}
+.glow {
+  font-size: 80px;
+  color: #fff;
+  text-align: center;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #000000, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+  }
+  
+  to {
+    text-shadow: 0 0 20px #000000, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+  }
+}
+a{
+  text-decoration:none;
+}
+
+.container {
+  text-align: center;
+}
+
+.top-right {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+#password {
+  padding: 10px;
+  margin: 10px;
+}
+
+.edit-section {
+  display: none;
+  margin-top: 20px;
+}
+
+#editable-text {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+#edit-button {
+  margin-top: 10px;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.result {
+  margin-top: 20px;
+  font-weight: bold;
+  color: green;
+  display: none;
+}
+#image-section {
+  margin-top: 20px;
+}
+
+#image-section img {
+  max-width: 100%;
+  height: auto;
+}
+         
